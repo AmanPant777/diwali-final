@@ -63,7 +63,7 @@ width: 100%;
 const Video=styled.video`
 z-index:10;
 left:70%;
-height:250px;
+height:260px;
 top:259px;
 left: 10%;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -78,6 +78,9 @@ border-radius:20px;
 }
 @media(max-height:568px){
   height: 200px;
+}
+@media(min-height:690px){
+  height: 290px;
 }
 `
 const Video1=styled.video`
@@ -132,27 +135,32 @@ align-items: center;
 `
 const Icon=styled.img`
 z-index:100;
-width: ${props=>props.shares?'30px':'170px'};
+transition: transform .2s;
+&:hover{transform: scale(1.1)}; 
+width: ${props=>props.shares?'30px':'150px'};
+margin-top: ${props=>props.shares&&'3px'};
 @media(max-width:768px){
   width: ${props=>props.shares?'27px':'150px'};
   margin-right:${props=>props.shares&&'-30px'};
 }
 `
 const Button=styled.button`
+transition: transform .2s;
+&:hover{transform: scale(1.1)}; 
 outline: none;
 border: none;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-height:43px;
+height:40px;
 margin-top: -4px;
 border-radius:5px;
 display:inline-block;
 cursor: pointer;
 border: 1px solid gray;
 background-color: black;
-width: 130px;
+width: 129px;
 @media(max-width:768px){
   height: 39px;
   width: 120px;
